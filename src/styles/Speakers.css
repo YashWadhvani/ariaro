@@ -1,0 +1,56 @@
+.speakers-container {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .speaker-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    /* box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15); */
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* backdrop-filter: blur(10px); */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.25);
+  }
+  
+  .speaker-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+  }
+  
+  .speaker-card h2 {
+    font-size: 2.5rem;
+    margin: 10px 0 5px;
+  }
+  
+  .speaker-card h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-bottom: 10px;
+  }
+  
+  .speaker-card p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+  

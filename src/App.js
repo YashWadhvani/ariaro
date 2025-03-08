@@ -8,6 +8,7 @@ import Speakers from "./pages/Speakers";
 import Footer from "./components/Footer";
 import VideoBackground from "./components/VideoBackground";
 import EventDetails from "./pages/EventDetails";
+import Schedule from "./pages/Schedule";
 
 function App() {
     return (
@@ -20,7 +21,11 @@ function App() {
                         {/* <Route path="/about" element={<About />} /> */}
                         <Route path="/events" element={<Events />} />
                         <Route path="/speakers" element={<Speakers />} />
-                        <Route path="/events/:eventId" element={<EventDetails />} />
+                        <Route path="/schedule" element={<Schedule />} />
+                        <Route
+                            path="/events/:eventId"
+                            element={<EventDetails />}
+                        />
                         {/* <Route path="/sponsors" element={<Sponsors />} /> */}
                     </Routes>
                     <Footer />
