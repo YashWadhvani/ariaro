@@ -1,13 +1,118 @@
-body {
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Responsive Base Font Size */
+html {
+  font-size: clamp(10px, 0.625vw, 18px); /* Scales with viewport width */
+}
+
+/* Responsive Headings */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem); /* Scales between 2rem and 3rem */
+  font-weight: bold;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: bold;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.5;
+}
+
+.luma-checkout--modal {
+  max-width: 550px !important;
+}
+
+.luma-checkout--button {
+  font-size: 1.5rem !important;
+  background-color: #36bdb4 !important;
+}
+
+/* Events Page */
+.events-page {
+  margin-top: 10rem;
+}
+
+.events-page>div {
+  margin-top: 2.5rem;
+}
+
+.events-page h1, .events-page h2, .events-page h4 {
+  text-align: center;
+}
+
+.events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Speaker Card */
+.speaker-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.speaker-card:hover {
+  transform: scale(1.05);
+}
+
+.speaker-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.speaker-card h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  color: #222;
+}
+
+.speaker-card p {
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  color: #777;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
