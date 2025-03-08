@@ -1,29 +1,111 @@
 /* Navbar Styling */
 .navbar {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(10px);
-    padding: 10px 30px;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Links */
+.navbar a, .mobile-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover, .mobile-menu a:hover {
+  color: #36bdb4;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 100000;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Transform Hamburger to Cross */
+.menu-icon.open {
+  transform: rotate(90deg);
+}
+
+/* Full-Screen Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100vw;  /* Full width */
+  height: 100vh; /* Full height */
+  background: rgba(0, 0, 0, 0.95); /* Darker overlay */
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  transition: right 0.3s ease-in-out;
+  z-index: 2000; /* Ensuring it's above all elements */
+}
+
+/* Show Mobile Menu when Active */
+.mobile-menu.active {
+  right: 0;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  right: -75px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 2500 !important; /* Above everything */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Transform Hamburger to Cross */
+.menu-icon.open {
+  transform: rotate(90deg);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 900px) {
+  .navbar {
+      right: 20px;
+      background: transparent;
   }
-  
+
   .navbar a {
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-    z-index: 1000;
+      display: none; /* Hide links on mobile */
   }
-  
-  .navbar a:hover {
-    color: #36bdb4;
+
+  .menu-icon {
+      display: block;
   }
+}

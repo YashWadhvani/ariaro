@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Navbar.css"
+import "../styles/Navbar.css";
 
 function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
-        <nav className="navbar">
-            {/* <h1>AriaRo 3.0</h1> */}
-            {/* <div> */}
+        <>
+            <nav className="navbar">
                 <Link to="/" className="px-4">
                     Home
                 </Link>
@@ -19,8 +20,16 @@ function Navbar() {
                 <Link to="/sponsors" className="px-4">
                     Sponsors
                 </Link>
-            {/* </div> */}
-        </nav>
+            </nav>
+
+            {/* Mobile Menu
+            <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+                <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+                <Link to="/events" onClick={() => setMenuOpen(false)}>Events</Link>
+                <Link to="/speakers" onClick={() => setMenuOpen(false)}>Speakers</Link>
+                <Link to="/sponsors" onClick={() => setMenuOpen(false)}>Sponsors</Link>
+            </div> */}
+        </>
     );
 }
 

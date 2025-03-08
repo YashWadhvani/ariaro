@@ -7,10 +7,11 @@ function EventCard({ title, description, date, event_id }) {
         <>
             <div className="event-card">
                 <h3>{title}</h3>
-                <p>{description}</p>
                 <span>{date}</span>
                 <br/>
-                <LumaButton eventId={event_id}/>
+                <div className="button-collection">
+                <a className="luma-checkout--button" href={`/events/${event_id}`}>Learn More</a>
+                <LumaButton eventId={event_id}/></div>
             </div>
         </>
     );

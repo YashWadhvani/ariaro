@@ -7,6 +7,7 @@ import Speakers from "./pages/Speakers";
 // import Sponsors from './components/Sponsors';
 import Footer from "./components/Footer";
 import VideoBackground from "./components/VideoBackground";
+import EventDetails from "./pages/EventDetails";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                         {/* <Route path="/about" element={<About />} /> */}
                         <Route path="/events" element={<Events />} />
                         <Route path="/speakers" element={<Speakers />} />
+                        <Route path="/events/:eventId" element={<EventDetails />} />
                         {/* <Route path="/sponsors" element={<Sponsors />} /> */}
                     </Routes>
                     <Footer />
