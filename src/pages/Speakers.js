@@ -1,6 +1,6 @@
 import React from "react";
 import SpeakerCard from "../components/SpeakerCard";
-import "../styles/Speakers.css"
+import "../styles/ProfileCards.css"
 import SpeakerInfo from "../assets/SpeakerInfo";
 
 // const speakersData = [
@@ -11,9 +11,9 @@ import SpeakerInfo from "../assets/SpeakerInfo";
 
 function Speakers() {
   return (
-    <div className="speakers-container">
+    <div className="profile-cards-container">
       <h1>Meet Our Speakers</h1>
-      <div className="speakers-grid">
+      <div className="profile-cards-grid">
         {SpeakerInfo.map((speaker, index) => (
           <SpeakerCard key={index} {...speaker} />
         ))}

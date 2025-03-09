@@ -1,7 +1,6 @@
 import React from "react";
-import SpeakerCard from "../components/SpeakerCard";
 import TeamMemberCard from "../components/TeamMemberCard";
-import "../styles/Speakers.css"
+import "../styles/ProfileCards.css"
 import TeamMembers from "../assets/Team";
 
 // const speakersData = [
@@ -12,9 +11,9 @@ import TeamMembers from "../assets/Team";
 
 function Team() {
   return (
-    <div className="speakers-container">
+    <div className="profile-cards-container">
       <h1>Meet Our Team</h1>
-      <div className="speakers-grid">
+      <div className="profile-cards-grid">
         {TeamMembers.map((member, index) => (
           <TeamMemberCard key={index} {...member} />
         ))}
