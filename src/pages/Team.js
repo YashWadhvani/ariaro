@@ -1,7 +1,7 @@
 import React from "react";
 import TeamMemberCard from "../components/TeamMemberCard";
 import "../styles/ProfileCards.css"
-import TeamMembers from "../assets/Team";
+import TeamMembers from "../assets/TeamMembers";
 
 // const speakersData = [
 //   { name: "Dr. Jane Smith", title: "AI Researcher", topic: "Future of AI", image: "speaker1.jpg" },
