@@ -11,11 +11,17 @@ function Navbar() {
                 <Link to="/" className="px-4">
                     Home
                 </Link>
+                <Link to="/schedule" className="px-4">
+                    Schedule
+                </Link>
                 <Link to="/events" className="px-4">
                     Events
                 </Link>
                 <Link to="/speakers" className="px-4">
                     Speakers
+                </Link>
+                <Link to="/team" className="px-4">
+                    Team
                 </Link>
                 <Link to="/sponsors" className="px-4">
                     Sponsors
