@@ -8,7 +8,7 @@ import RedHat from "../assets/Logos/redhat.png";
 import ElectroMech from "../assets/Logos/electromech.png";
 import IIC from "../assets/Logos/iiclogo.png";
 import SeedFund from "../assets/Logos/seedfund.png";
-import GDG from "../assets/Logos/GDG-KU.png";
+import GDG from "../assets/Logos/GDG.png";
 import EduNet from "../assets/Logos/edunet.png";
 
 const partners = [

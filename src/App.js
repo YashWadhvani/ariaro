@@ -8,9 +8,9 @@ import Speakers from "./pages/Speakers";
 import Footer from "./components/Footer";
 import VideoBackground from "./components/VideoBackground";
 import EventDetails from "./pages/EventDetails";
-import Schedule from "./pages/Schedule";
+// import Schedule from "./pages/Schedule";
 import Team from "./pages/Team";
-import ScheduleTimeline from "./pages/ScheduleTimeline";
+// import ScheduleTimeline from "./pages/ScheduleTimeline";
 import ComingSoon from "./components/ComingSoon";
 
 function App() {

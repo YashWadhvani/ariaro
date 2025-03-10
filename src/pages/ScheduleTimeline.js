@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Schedule from "../assets/schedule";
-import "./ScheduleTimeline.css";
+import "../styles/ScheduleTimeline.css";
 
 const ScheduleTimeline = () => {
     const [selectedDay, setSelectedDay] = useState(Object.keys(Schedule)[0]);

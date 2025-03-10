@@ -13,8 +13,8 @@ function HeroSection() {
                     enthusiasts, developers, and innovators from across the nation. 
                     Don't miss out on this amazing experience!
                 </p>
-                <button className="hero-btn">Find More</button>
             </div>
+                <a className="hero-btn" href="/events">Register Now!</a>
         </section>
     );
 }
