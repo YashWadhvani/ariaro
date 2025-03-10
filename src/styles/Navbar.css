@@ -107,13 +107,14 @@ body.no-scroll {
 /* Mobile Menu */
 .mobile-menu {
     position: fixed;
+    display: none;
     top: 0;
     right: -100%;
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(15px);
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -129,6 +130,7 @@ body.no-scroll {
     opacity: 1;
     visibility: visible;
     right: 0;
+    display: flex;
 }
 
 /* Mobile Menu Links */
