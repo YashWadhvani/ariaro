@@ -169,7 +169,7 @@
   display: flex;
 }
 
-.event-card {
+.events-card {
   background: rgba(100, 100, 100, 0.25);
   padding: 15px;
   border-radius: 10px;
@@ -179,13 +179,13 @@
   min-width: 15rem;
 }
 
-.event-card h2 {
+.events-card h2 {
   color: #ffffff;
   margin: 0 0 5px;
   font-size: 18px;
 }
 
-.event-card p {
+.events-card p {
   margin: 0;
   color: #ffffff;
 }
