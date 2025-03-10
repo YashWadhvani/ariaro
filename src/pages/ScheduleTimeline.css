@@ -1,0 +1,84 @@
+.schedule-container {
+    max-width: 900px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Tabs */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.tab-button.active {
+    background: #007bff;
+    color: white;
+}
+
+/* Timeline */
+.timeline {
+    border-left: 3px solid #007bff;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Time Blocks */
+.time-block {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.time-block::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #007bff;
+    border-radius: 50%;
+    position: absolute;
+    left: -27px;
+    top: 10px;
+}
+
+.time-range {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Events */
+.events {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.event-card {
+    background: #f0f8ff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    border-left: 4px solid #007bff;
+}
+
+.event-card strong {
+    display: block;
+    color: #007bff;
+}
+
+.event-card p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}

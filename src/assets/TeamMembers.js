@@ -15,7 +15,7 @@ import ShreemadKumbhani from "../assets/Team/ShreemadKumbhani.png";
 import AalayKabariya from "../assets/Team/AalayKabariya.png";
 import JainamVora from "../assets/Team/JainamVora.png";
 // import JeelPatel from "../assets/Team/JeelPatel.png";
-// import VaidehiShah from "../assets/Team/VaidehiShah.png";
+import VaidehiShah from "../assets/Team/VaidehiShah.png";
 import AaryaMaru from "../assets/Team/AaryaMaru.png";
 import Female from "../assets/Team/Female.jpg";
 import Male from "../assets/Team/Male.jpg";
@@ -144,7 +144,7 @@ const TeamMembers = [
         name: "Vaidehi Shah",
         role: "Crew Team",
         domain: "Cultural Committee",
-        image: Female,
+        image: VaidehiShah,
         linkedin: "#",
     },
     {

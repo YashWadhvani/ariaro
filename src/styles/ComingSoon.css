@@ -1,0 +1,38 @@
+.coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
+
+.coming-soon-title {
+    /* font-size: 2.5rem; */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.coming-soon-text {
+    /* font-size: 1.2rem; */
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.loading-animation {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #36bdb4, #1f7a76);
+    border-radius: 5px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
