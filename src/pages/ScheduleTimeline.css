@@ -63,7 +63,7 @@
     gap: 10px;
 }
 
-.event-card {
+.events-card {
     background: #f0f8ff;
     padding: 10px;
     border-radius: 8px;
@@ -72,12 +72,12 @@
     border-left: 4px solid #007bff;
 }
 
-.event-card strong {
+.events-card strong {
     display: block;
     color: #007bff;
 }
 
-.event-card p {
+.events-card p {
     margin: 0;
     color: #333;
     font-size: 14px;
