@@ -54,3 +54,8 @@
     opacity: 0.9;
   }
   
+  @media (max-width: 768px) {
+    .profile-cards-container {
+      padding: 40px;
+    }
+  }
