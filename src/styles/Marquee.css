@@ -1,0 +1,51 @@
+/* Prevents website from shifting */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Marquee container to keep everything centered */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent */
+    padding: 15px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Marquee wrapper */
+.marquee {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Limits width to avoid overflow */
+    overflow: hidden;
+    position: relative;
+}
+
+/* The scrolling track */
+.marquee-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+/* Logo styling */
+.marquee-logo {
+    height: 5rem;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Smooth scrolling animation */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
