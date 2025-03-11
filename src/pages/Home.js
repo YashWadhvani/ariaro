@@ -7,10 +7,14 @@ import About from "../components/About";
 function Home() {
     return (
         <>
-            <HeroSection />
-            <CountdownBanner/>
-            <About />
-            <Marquee/>
+            <>
+                <HeroSection />
+                <CountdownBanner />
+            </>
+            <>
+                <About />
+                <Marquee />
+            </>
         </>
     );
 }
