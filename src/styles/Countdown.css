@@ -132,7 +132,7 @@
   
 @media (max-width: 768px) {
     .countdown-banner {
-        padding-bottom: 5rem;
+        padding: 10rem 0;
     }
     .countdown-container {
         max-width: none;

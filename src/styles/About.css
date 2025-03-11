@@ -10,3 +10,9 @@
 .about-text {
     text-align: justify;
 }
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 10rem 0;
+    }
+}

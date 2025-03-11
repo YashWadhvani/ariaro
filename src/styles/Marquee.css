@@ -59,7 +59,10 @@ body {
     .marquee-header {
         padding: 5rem 0;
     }
+    .marquee-container {
+        padding: 10rem 0;
+    }
     .marquee-logo {
-        height: 12rem;
+        height: 20rem;
     }
 }
