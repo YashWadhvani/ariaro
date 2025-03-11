@@ -1,0 +1,12 @@
+.about-section {
+    max-width: 90%;
+    margin: auto;
+    padding: 2.5rem 0;
+}
+.about-title {
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+.about-text {
+    text-align: justify;
+}

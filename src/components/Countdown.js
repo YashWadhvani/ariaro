@@ -3,7 +3,7 @@ import Countdown from "react-countdown";
 import "../styles/Countdown.css"
 
 const CountdownBanner = () => {
-    const eventDate = new Date("2025-03-26T00:00:00");
+    const eventDate = new Date("2025-03-26T03:30:00Z");
 
     const renderer = ({ days, hours, minutes, seconds }) => {
         return (

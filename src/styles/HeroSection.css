@@ -74,12 +74,13 @@
   text-align: left;
   color: white;
   flex-direction: column;
+  padding-bottom: 2.5rem;
 }
 
 /* Hero Content */
 .hero-content {
-  max-width: 70rem;
   padding-top: 15rem;
+  padding-bottom: 2.5rem;
   border-radius: 1rem;
   text-align: left;
   animation: fadeIn 1.2s ease-in-out;
@@ -143,8 +144,12 @@
     padding: 30rem 0 10rem 0;
   }
   .hero-content {
-    max-width: 80%;
+    max-width: 100%;
     text-align: center;
+    padding-bottom: 10rem;
+  }
+  .hero-content img {
+    width: 100%;
   }
   .hero-content p {
     font-size: 5rem;

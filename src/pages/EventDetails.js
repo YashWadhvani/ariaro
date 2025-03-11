@@ -5,7 +5,7 @@ import "../styles/EventDetails.css"; // Import the CSS file
 
 function EventDetails() {
     const { eventId } = useParams(); // Get eventId from URL
-    const allEvents = [...events.workshops, ...events.technicalEvents]; // Merge all event categories
+    const allEvents = [...events.workshops, ...events.technicalEvents, ...events.nonTechnicalEvents]; // Merge all event categories
     const event = allEvents.find(event => event.event_id === eventId);
 
     if (!event) {
