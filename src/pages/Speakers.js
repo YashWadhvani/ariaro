@@ -6,7 +6,7 @@ function Speakers() {
   const [speakers, setSpeakers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/speakers") // Replace with actual backend URL
+    fetch("https://ariaro-backend.onrender.com/speakers") // Replace with actual backend URL
       .then((res) => res.json())
       .then((data) => setSpeakers(data))
       .catch((err) => console.error("Error fetching speakers:", err));

@@ -6,7 +6,7 @@ function Events() {
     const [events, setEvents] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:5000/events") // Replace with actual backend URL
+        fetch("https://ariaro-backend.onrender.com/events") // Replace with actual backend URL
             .then((res) => res.json())
             .then((data) => setEvents(data))
             .catch((err) => console.error("Error fetching events:", err));

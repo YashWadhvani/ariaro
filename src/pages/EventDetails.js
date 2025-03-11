@@ -10,7 +10,7 @@ function EventDetails() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/events/${eventId}`) // Check if backend is running on 5000
+        fetch(`https://ariaro-backend.onrender.com/events/${eventId}`) // Check if backend is running on 5000
             .then((res) => {
                 if (!res.ok) throw new Error("Event not found");
                 return res.json();

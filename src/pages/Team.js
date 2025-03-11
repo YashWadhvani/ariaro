@@ -7,7 +7,7 @@ function Team() {
   const [teamMembers, setTeamMembers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/team-members") // Replace with actual backend URL
+    fetch("https://ariaro-backend.onrender.com/team-members") // Replace with actual backend URL
       .then((res) => res.json())
       .then((data) => setTeamMembers(data))
       .catch((err) => console.error("Error fetching team members:", err));
