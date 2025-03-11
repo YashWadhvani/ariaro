@@ -27,7 +27,7 @@ const partners = [
 function Marquee() {
     return (
         <>
-        <h2 style={{textAlign:"center", margin:"1rem 0"}}>Eco System Partners :</h2>
+        <h2 className="marquee-header">Eco System Partners :</h2>
         <div className="marquee-container">
             <div className="marquee">
                 <div className="marquee-track">

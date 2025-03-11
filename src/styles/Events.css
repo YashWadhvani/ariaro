@@ -1,0 +1,41 @@
+.events-page {
+    margin-top: 10rem;
+}
+
+.events-page > div {
+    margin-top: 2.5rem;
+}
+
+.events-page h1,
+.events-page h2,
+.events-page h4 {
+    text-align: center;
+}
+
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .events-page {
+        margin-top: 35rem;
+    }
+    .events-page h4 {
+        width: 90%;
+        margin: auto;
+        padding: 2.5rem 0;
+    }
+}

@@ -5,7 +5,7 @@ function HeroSection() {
     return (
         <section className="hero-section">
             <div className="hero-content">
-                <h1>Ariaro 3.0</h1>
+                <h1>AriaRo 3.0</h1>
                 <h3>National Level Tech Event</h3>
                 <p>
                     Join us for an exciting journey into the world of technology, 

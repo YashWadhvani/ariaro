@@ -1,6 +1,7 @@
 import EventCard from "../components/EventCard";
 import React from "react";
 import events from "../assets/EventInfo_updated";
+import "../styles/Events.css"
 
 function Events() {
     return (

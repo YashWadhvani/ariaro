@@ -38,24 +38,30 @@
   }
   
   .profile-card h2 {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     margin: 10px 0 5px;
   }
   
   .profile-card h3 {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     font-weight: 400;
     opacity: 0.8;
     margin-bottom: 10px;
   }
   
   .profile-card p {
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     opacity: 0.9;
   }
   
   @media (max-width: 768px) {
     .profile-cards-container {
-      padding: 40px;
+      padding: 30rem 15rem;
+    }
+    .profile-card h4 {
+      padding: 2rem 0;
+    }
+    .profile-card p {
+      padding: 2rem 0;
     }
   }

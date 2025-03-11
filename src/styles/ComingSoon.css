@@ -36,3 +36,14 @@
     50% { opacity: 1; }
     100% { opacity: 0.6; }
 }
+
+@media (max-width: 768px) {
+    .coming-soon-container {
+        height: 95vh;
+        width: 80%;
+        margin: auto;
+    }
+    .loading-animation {
+        font-size: 6rem;
+    }
+}

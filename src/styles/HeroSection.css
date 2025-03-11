@@ -1,7 +1,7 @@
 /* Hero Section */
-.hero-section {
+/* .hero-section {
     width: 100%;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,19 +19,19 @@
   }
   
   .hero-content h2 {
-    /* font-size: 48px; */
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 10px;
   }
   
   .hero-content h3 {
-    /* font-size: 28px; */
+    font-size: 28px;
     font-weight: 500;
     margin-bottom: 15px;
   }
   
   .hero-content p {
-    /* font-size: 16px; */
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
   }
@@ -51,10 +51,10 @@
   .hero-btn:hover {
     background: #e68900;
     transform: scale(1.05);
-  }
+  } */
   
   /* Smooth Fade-in Effect */
-  @keyframes fadeIn {
+  /* @keyframes fadeIn {
     from {
       opacity: 0;
       transform: translateY(-20px);
@@ -63,4 +63,96 @@
       opacity: 1;
       transform: translateY(0);
     }
+  } */
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: white;
+  flex-direction: column;
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 70rem;
+  padding-top: 15rem;
+  border-radius: 1rem;
+  text-align: left;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-content h2 {
+  /* font-size: 4.8rem;  */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-content h3 {
+  /* font-size: 2.8rem; */
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  /* font-size: 1.6rem; */
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* Hero Button */
+.hero-btn {
+  background: #36bdb4;
+  color: white;
+  font-size: 2rem;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.hero-btn:hover {
+  /* background: #e68900; */
+  transform: scale(1.05);
+}
+
+/* Smooth Fade-in Effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .content-overlay {
+    width: 100% !important;
+    padding: 0;
+    min-width: none;
+  }
+  .hero-section {
+    padding: 30rem 0 10rem 0;
+  }
+  .hero-content {
+    max-width: 80%;
+    text-align: center;
+  }
+  .hero-content p {
+    font-size: 5rem;
+    text-align: justify;
+    margin-bottom: 5rem;
+  }
+  .hero-btn {
+    font-size: 6rem;
+    padding: 3.5rem 7rem;
+  }
+}

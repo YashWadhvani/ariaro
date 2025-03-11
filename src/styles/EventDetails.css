@@ -31,7 +31,7 @@
 /* Event title */
 .event-title {
     color: white;
-    font-size: 4rem;
+    /* font-size: 4rem; */
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -40,7 +40,7 @@
 /* Event description */
 .event-description {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.7rem;
+    /* font-size: 1.7rem; */
     max-width: 80%;
     line-height: 1.6;
 }
@@ -48,21 +48,21 @@
 /* Event date */
 .event-date {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 2rem;
+    /* font-size: 2rem; */
     margin-top: 10px;
 }
 
 /* Not found message */
 .not-found {
     color: white;
-    font-size: 2rem;
+    /* font-size: 2rem; */
     text-align: center;
 }
 
 /* Luma Button */
-.luma-checkout--button {
+/* .luma-checkout--button {
     font-size: 2rem !important;
-}
+} */
 
 /* 📌 Responsive Design */
 @media (max-width: 1200px) {
@@ -70,7 +70,10 @@
         width: 90vw;
         height: 100%;
     }
-    .event-title {
+    .event-description {
+        max-width: 90%;
+    }
+    /* .event-title {
         font-size: 3rem;
     }
     .event-description {
@@ -79,7 +82,7 @@
     }
     .event-date {
         font-size: 1.8rem;
-    }
+    } */
 }
 
 @media (max-width: 900px) {
@@ -88,7 +91,10 @@
         height: 100%;
         padding: 15px;
     }
-    .event-title {
+    .event-description {
+        max-width: 95%;
+    }
+    /* .event-title {
         font-size: 2.5rem;
     }
     .event-description {
@@ -100,16 +106,16 @@
     }
     .luma-checkout--button {
         font-size: 1.8rem !important;
-    }
+    } */
 }
 
 @media (max-width: 600px) {
     .event-box {
         width: 95vw;
-        height: 100%;
+        height: 85%;
         padding: 50px 15px;
     }
-    .event-title {
+    /* .event-title {
         font-size: 2.5rem;
     }
     .event-description {
@@ -120,5 +126,5 @@
     }
     .luma-checkout--button {
         font-size: 1.5rem !important;
-    }
+    } */
 }

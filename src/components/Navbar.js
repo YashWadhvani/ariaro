@@ -21,11 +21,10 @@ function Navbar() {
                 {/* Desktop Menu Links */}
                 <div className="menu-links">
                     <Link to="/" className="px-4">Home</Link>
-                    <Link to="/schedule" className="px-4">Schedule</Link>
-                    <Link to="/events" className="px-4">Events</Link>
                     <Link to="/speakers" className="px-4">Speakers</Link>
+                    <Link to="/events" className="px-4">Events</Link>
                     <Link to="/team" className="px-4">Team</Link>
-                    <Link to="/sponsors" className="px-4">Sponsors</Link>
+                    <Link to="/schedule" className="px-4">Schedule</Link>
                 </div>
 
                 {/* Hamburger Menu (Only on Mobile) */}
@@ -39,11 +38,10 @@ function Navbar() {
             {/* Mobile Menu Overlay */}
             <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
                 <Link to="/" onClick={toggleMenu}>Home</Link>
-                <Link to="/schedule" onClick={toggleMenu}>Schedule</Link>
-                <Link to="/events" onClick={toggleMenu}>Events</Link>
                 <Link to="/speakers" onClick={toggleMenu}>Speakers</Link>
+                <Link to="/events" onClick={toggleMenu}>Events</Link>
                 <Link to="/team" onClick={toggleMenu}>Team</Link>
-                <Link to="/sponsors" onClick={toggleMenu}>Sponsors</Link>
+                <Link to="/schedule" onClick={toggleMenu}>Schedule</Link>
             </div>
         </>
     );

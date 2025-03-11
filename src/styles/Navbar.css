@@ -24,6 +24,8 @@ body.no-scroll {
     align-items: center;
     gap: 20px;
     z-index: 2500;
+    justify-content: space-between;
+    width: 95%;
 }
 
 /* Logo */
@@ -54,14 +56,17 @@ body.no-scroll {
     .menu-links {
         display: none;
     }
+    .nav-logo {
+        height: 12rem;
+    }
 }
 
 /* Hamburger Menu */
 .menu-icon {
     display: none; /* Hidden on large screens */
     cursor: pointer;
-    width: 35px;
-    height: 30px;
+    width: 10rem;
+    height: 7.5rem;
     position: relative;
     z-index: 2500;
 }
@@ -71,7 +76,7 @@ body.no-scroll {
     display: block;
     position: absolute;
     width: 100%;
-    height: 5px;
+    height: 3px;
     background: white;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
