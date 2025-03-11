@@ -15,10 +15,6 @@ html, body {
     overflow-y: auto; /* Allow vertical scrolling */
 }
 
-#root {
-    min-height: 100vh;
-}
-
 /* Responsive Headings */
 h1 {
     font-size: 4.5rem;
