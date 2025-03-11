@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/EventCard.css";
 import LumaButton from "./LumaButton";
 
-function EventCard({ title, description, date, event_id }) {
+function EventCard({ title, date, event_id }) {
     return (
         <>
             <div className="event-card">

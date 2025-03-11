@@ -1,7 +1,7 @@
 /* Full-page container with centered content */
 .event-container {
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    margin-top: 25rem;
+    margin-top: 15rem;
     text-align: justify;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
@@ -115,7 +115,7 @@
     }
     .event-box {
         width: 95vw;
-        min-height: 80%;
+        min-height: fit-content;
         padding: 45px 15px;
     }
     /* .event-title {

@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SpeakerCard from "../components/SpeakerCard";
-import "../styles/ProfileCards.css"
-import SpeakerInfo from "../assets/SpeakerInfo";
-
-// const speakersData = [
-//   { name: "Dr. Jane Smith", title: "AI Researcher", topic: "Future of AI", image: "speaker1.jpg" },
-//   { name: "Mr. John Doe", title: "Cybersecurity Expert", topic: "Cyber Threats in 2025", image: "speaker2.jpg" },
-//   { name: "Ms. Emily White", title: "Blockchain Developer", topic: "Decentralization & Web3", image: "speaker3.jpg" },
-// ];
+import "../styles/ProfileCards.css";
 
 function Speakers() {
+  const [speakers, setSpeakers] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/speakers") // Replace with actual backend URL
+      .then((res) => res.json())
+      .then((data) => setSpeakers(data))
+      .catch((err) => console.error("Error fetching speakers:", err));
+  }, []);
+
   return (
     <div className="profile-cards-container">
       <h1>Meet Our Speakers</h1>
       <div className="profile-cards-grid">
-        {SpeakerInfo.map((speaker, index) => (
-          <SpeakerCard key={index} {...speaker} />
-        ))}
+        {speakers.length > 0 ? (
+          speakers.map((speaker, index) => (
+            <SpeakerCard key={index} {...speaker} />
+          ))
+        ) : (
+          <p>Loading speakers...</p>
+        )}
       </div>
     </div>
-  )
+  );
 }
 
-export default Speakers
+export default Speakers;
