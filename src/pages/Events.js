@@ -13,7 +13,7 @@ function Events() {
     }, []);
 
     if (!events) {
-        return <p>Loading events...</p>;
+        return <p style={{position:"absolute",top:"50%", right:"50%", transform:"translate(-50%,-50%)"}}>Loading events...</p>;
     }
 
     return (
@@ -22,7 +22,7 @@ function Events() {
 
             <div>
                 <h2>Workshops</h2>
-                <h4>Learn from leading Industry Experts and gain Hands-On Experience</h4>
+                <h4>Hands-on learning sessions led by industry experts.</h4>
                 <section className="events-grid">
                     {events.workshops.map((event, index) => (
                         <EventCard key={index} {...event} />
@@ -32,7 +32,7 @@ function Events() {
 
             <div>
                 <h2>Technical Competitions</h2>
-                <h4>For all the techies. Compete with each other and show your technical skills.</h4>
+                <h4>Compete, innovate, and test your tech expertise.</h4>
                 <section className="events-grid">
                     {events.technicalEvents.map((event, index) => (
                         <EventCard key={index} {...event} />
@@ -42,7 +42,7 @@ function Events() {
 
             <div>
                 <h2>Non-Technical Competitions</h2>
-                <h4>Competitions for everyone to enjoy. No or Low Technical Background People are Welcome.</h4>
+                <h4>Fun-filled challenges and creative activities for all.</h4>
                 <section className="events-grid">
                     {events.nonTechnicalEvents.map((event, index) => (
                         <EventCard key={index} {...event} />

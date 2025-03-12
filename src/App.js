@@ -1,16 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-// import About from './components/About';
 import Events from "./pages/Events";
 import Speakers from "./pages/Speakers";
-// import Sponsors from './components/Sponsors';
 import Footer from "./components/Footer";
 import VideoBackground from "./components/VideoBackground";
 import EventDetails from "./pages/EventDetails";
-// import Schedule from "./pages/Schedule";
 import Team from "./pages/Team";
-// import ScheduleTimeline from "./pages/ScheduleTimeline";
 import ComingSoon from "./components/ComingSoon";
 
 function App() {

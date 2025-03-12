@@ -8,8 +8,15 @@ function Navbar() {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        document.body.classList.toggle("no-scroll", !menuOpen);
-    };
+        
+        document.documentElement.classList.toggle("no-scroll", menuOpen);
+        document.body.classList.toggle("no-scroll", menuOpen);
+    
+        const contentOverlay = document.querySelector(".content-overlay");
+        if (contentOverlay) {
+            contentOverlay.style.overflowY = menuOpen ? "auto" : "hidden";
+        }
+    }; 
 
     return (
         <>

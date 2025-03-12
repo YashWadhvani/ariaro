@@ -20,7 +20,7 @@
     left: 0;
     z-index: 1;
     color: white; /* Adjust as needed */
-    min-height: 100vh;
+    min-height: 100%;
     min-width: 100vw;
     overflow-y: auto;
     background: rgba(0, 0, 0, 0.1);

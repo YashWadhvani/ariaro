@@ -1,7 +1,6 @@
 /* Full-page container with centered content */
 .event-container {
     width: 100vw;
-    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,17 +20,14 @@
     margin-top: 15rem;
     text-align: justify;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    /* backdrop-filter: blur(10px); Blurred background */
-    /* -webkit-backdrop-filter: blur(10px); */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Event title */
 .event-title {
     color: white;
-    /* font-size: 4rem; */
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -40,7 +36,6 @@
 /* Event description */
 .event-description {
     color: rgba(255, 255, 255, 0.9);
-    /* font-size: 1.7rem; */
     max-width: 80%;
     line-height: 1.6;
 }
@@ -48,21 +43,16 @@
 /* Event date */
 .event-date {
     color: rgba(255, 255, 255, 0.8);
-    /* font-size: 2rem; */
     margin-top: 10px;
 }
 
 /* Not found message */
 .not-found {
     color: white;
-    /* font-size: 2rem; */
     text-align: center;
 }
 
 /* Luma Button */
-/* .luma-checkout--button {
-    font-size: 2rem !important;
-} */
 
 /* 📌 Responsive Design */
 @media (max-width: 1200px) {
@@ -73,16 +63,6 @@
     .event-description {
         max-width: 90%;
     }
-    /* .event-title {
-        font-size: 3rem;
-    }
-    .event-description {
-        font-size: 1.5rem;
-        max-width: 90%;
-    }
-    .event-date {
-        font-size: 1.8rem;
-    } */
 }
 
 @media (max-width: 900px) {
@@ -94,19 +74,6 @@
     .event-description {
         max-width: 95%;
     }
-    /* .event-title {
-        font-size: 2.5rem;
-    }
-    .event-description {
-        font-size: 1.3rem;
-        max-width: 95%;
-    }
-    .event-date {
-        font-size: 1.5rem;
-    }
-    .luma-checkout--button {
-        font-size: 1.8rem !important;
-    } */
 }
 
 @media (max-width: 600px) {
@@ -118,16 +85,4 @@
         min-height: fit-content;
         padding: 45px 15px;
     }
-    /* .event-title {
-        font-size: 2.5rem;
-    }
-    .event-description {
-        font-size: 1.3rem;
-    }
-    .event-date {
-        font-size: 1.2rem;
-    }
-    .luma-checkout--button {
-        font-size: 1.5rem !important;
-    } */
 }

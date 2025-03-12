@@ -6,8 +6,12 @@ html, body {
 }
 
 /* Disable Vertical Scroll When Menu is Open */
-body.no-scroll {
-    overflow: hidden;
+/* Prevent scrolling when menu is open */
+body.no-scroll, html.no-scroll {
+    overflow: hidden !important;
+    height: 100vh !important;
+    position: fixed !important;
+    width: 100vw !important;
 }
 
 /* Navbar */
@@ -63,7 +67,7 @@ body.no-scroll {
 
 /* Hamburger Menu */
 .menu-icon {
-    display: none; /* Hidden on large screens */
+    display: none;
     cursor: pointer;
     width: 10rem;
     height: 7.5rem;
@@ -94,7 +98,7 @@ body.no-scroll {
 }
 
 .menu-icon.open span:nth-child(2) {
-    opacity: 0; /* Hide middle line */
+    opacity: 0;
 }
 
 .menu-icon.open span:nth-child(3) {
@@ -119,7 +123,6 @@ body.no-scroll {
     height: 100vh;
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(15px);
-    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
