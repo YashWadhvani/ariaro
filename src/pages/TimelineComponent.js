@@ -7,7 +7,7 @@
 //     const [selectedDate, setSelectedDate] = useState("2025-03-26");
 
 //     useEffect(() => {
-//         fetch("http://localhost:5000/events") // API CALL
+//         fetch("https://ariaro-backend.onrender.com/events") // API CALL
 //             .then((response) => response.json())
 //             .then((data) => {
 //                 console.log("API Response:", data);
@@ -113,7 +113,7 @@
 //     const [selectedDate, setSelectedDate] = useState("2025-03-26");
 
 //     useEffect(() => {
-//         fetch("http://localhost:5000/events") // API CALL
+//         fetch("https://ariaro-backend.onrender.com/events") // API CALL
 //             .then((response) => response.json())
 //             .then((data) => {
 //                 console.log("API Response:", data);
@@ -248,7 +248,7 @@ const TimelineComponent = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:5000/events") // ✅ Replace with actual API URL
+        fetch("https://ariaro-backend.onrender.com/events") // ✅ Replace with actual API URL
             .then((response) => response.json())
             .then((data) => {
                 console.log("API Response:", data);

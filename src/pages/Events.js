@@ -6,7 +6,7 @@
 //     const [events, setEvents] = useState(null);
 
 //     useEffect(() => {
-//         fetch("http://localhost:5000/events") // Replace with actual backend URL
+//         fetch("https://ariaro-backend.onrender.com/events") // Replace with actual backend URL
 //             .then((res) => res.json())
 //             .then((data) => setEvents(data))
 //             .catch((err) => console.error("Error fetching events:", err));
@@ -96,7 +96,7 @@ function Events() {
     const fetchCategoryEvents = async (categoryKey, categoryName) => {
         try {
             const response = await fetch(
-                `http://localhost:5000/events/category/${categoryName}`
+                `https://ariaro-backend.onrender.com/events/category/${categoryName}`
             );
             const data = await response.json();
 
