@@ -70,3 +70,8 @@
 .footer-bottom a {
     color: #36bdb4;
 }
+@media (max-width: 768px) {
+    .footer-right{
+        display: none;
+    }
+}
