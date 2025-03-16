@@ -1,0 +1,24 @@
+.custom-carousel {
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.slick-dots li button:before {
+    color: #36bdb4 !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #28a745 !important;
+}

@@ -1,77 +1,77 @@
 import React, { useEffect, useState } from "react";
-import { Chrono } from "react-chrono";
+// import { Chrono } from "react-chrono";
 // import axios from "axios";
 
 const TimelineComponent = () => {
     const [events, setEvents] = useState([]);
-    const events_new = {
-        workshops: [
-            {
-                title: "IoT",
-                description: "Description",
-                date: "March 26",
-            },
-            {
-                title: "IoT",
-                description: "Description",
-                date: "March 26",
-            },
-            {
-                title: "IoT",
-                description: "Description",
-                date: "March 27",
-            },
-            {
-                title: "IoT",
-                description: "Description",
-                date: "March 28",
-            },
-        ],
-        technical: [
-            {
-                title: "TTH",
-                description: "Description",
-                date: "March 26",
-            },
-            {
-                title: "TTH",
-                description: "Description",
-                date: "March 27",
-            },
-            {
-                title: "TTH",
-                description: "Description",
-                date: "March 27",
-            },
-            {
-                title: "TTH",
-                description: "Description",
-                date: "March 28",
-            },
-        ],
-        nonTechnical: [
-            {
-                title: "TTH",
-                description: "Description",
-                date: "March 26",
-            },
-            {
-                title: "TTH",
-                description: "Description",
-                date: "March 27",
-            },
-            {
-                title: "TTH",
-                description: "Description",
-                date: "March 28",
-            },
-            {
-                title: "TTH",
-                description: "Description",
-                date: "March 28",
-            },
-        ],
-    };
+    // const events_new = {
+    //     workshops: [
+    //         {
+    //             title: "IoT",
+    //             description: "Description",
+    //             date: "March 26",
+    //         },
+    //         {
+    //             title: "IoT",
+    //             description: "Description",
+    //             date: "March 26",
+    //         },
+    //         {
+    //             title: "IoT",
+    //             description: "Description",
+    //             date: "March 27",
+    //         },
+    //         {
+    //             title: "IoT",
+    //             description: "Description",
+    //             date: "March 28",
+    //         },
+    //     ],
+    //     technical: [
+    //         {
+    //             title: "TTH",
+    //             description: "Description",
+    //             date: "March 26",
+    //         },
+    //         {
+    //             title: "TTH",
+    //             description: "Description",
+    //             date: "March 27",
+    //         },
+    //         {
+    //             title: "TTH",
+    //             description: "Description",
+    //             date: "March 27",
+    //         },
+    //         {
+    //             title: "TTH",
+    //             description: "Description",
+    //             date: "March 28",
+    //         },
+    //     ],
+    //     nonTechnical: [
+    //         {
+    //             title: "TTH",
+    //             description: "Description",
+    //             date: "March 26",
+    //         },
+    //         {
+    //             title: "TTH",
+    //             description: "Description",
+    //             date: "March 27",
+    //         },
+    //         {
+    //             title: "TTH",
+    //             description: "Description",
+    //             date: "March 28",
+    //         },
+    //         {
+    //             title: "TTH",
+    //             description: "Description",
+    //             date: "March 28",
+    //         },
+    //     ],
+    // };
 
     useEffect(() => {
         // Fetch events from backend
@@ -97,11 +97,12 @@ const TimelineComponent = () => {
     return (
         <div style={{ width: "100%", height: "600px" }}>
             {events.length > 0 ? (
-                <Chrono
-                    items={events}
-                    mode="VERTICAL_ALTERNATING"
-                    hidecontrols
-                />
+                <h1>Events</h1>
+                // <Chrono
+                //     items={events}
+                //     mode="VERTICAL_ALTERNATING"
+                //     hidecontrols
+                // />
             ) : (
                 <p>Loading events...</p>
             )}

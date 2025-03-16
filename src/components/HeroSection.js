@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/HeroSection.css"; // Ensure styling is applied
 import AriaRoBanner from "../assets/ariaro-banner.png"
+import Carousel from "./Carousel"
 
 function HeroSection() {
     return (
@@ -14,7 +15,8 @@ function HeroSection() {
                     enthusiasts, developers, and innovators from across the nation. 
                     Don't miss out on this amazing experience!
                 </p> */}
-                <img src={AriaRoBanner} width={"auto"} alt="AriaRo Banner"/>
+                {/* <img src={AriaRoBanner} width={"auto"} alt="AriaRo Banner"/> */}
+                <Carousel images={["/ariaro-banner.png", "/ariaro-banner.png"]}/>
             </div>
                 <a className="hero-btn" href="/events">Register Now!</a>
         </section>

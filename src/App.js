@@ -8,7 +8,7 @@ import VideoBackground from "./components/VideoBackground";
 import EventDetails from "./pages/EventDetails";
 import Team from "./pages/Team";
 // import ComingSoon from "./components/ComingSoon";
-import Schedule from "./pages/Schedule";
+// import Schedule from "./pages/Schedule";
 import TimelineComponent from "./pages/TimelineComponent";
 
 function App() {

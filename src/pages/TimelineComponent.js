@@ -144,12 +144,12 @@
 //     const formatTime = (timeString) => {
 //         if (!timeString) return "Invalid Time"; // Handle missing values
 //         const date = new Date(timeString);
-        
+
 //         if (isNaN(date.getTime())) {
 //             console.error("Invalid Date:", timeString);
 //             return "Invalid Time";
 //         }
-    
+
 //         return date.toLocaleTimeString("en-US", {
 //             hour: "2-digit",
 //             minute: "2-digit",
@@ -236,10 +236,13 @@
 
 // export default TimelineComponent;
 
-
 import React, { useEffect, useState } from "react";
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import {
+    VerticalTimeline,
+    VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import "../styles/Timeline.css";
 
 const TimelineComponent = () => {
     const [events, setEvents] = useState([]);
@@ -248,7 +251,7 @@ const TimelineComponent = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch("https://ariaro-backend.onrender.com/events") // ✅ Replace with actual API URL
+        fetch("http://localhost:5000/events") // ✅ Replace with actual API URL
             .then((response) => response.json())
             .then((data) => {
                 console.log("API Response:", data);
@@ -262,12 +265,15 @@ const TimelineComponent = () => {
                 // Extract and format events
                 const formattedEvents = data.map((event) => ({
                     title: event.title,
-                    date: event.date ? event.date.split("T")[0] : "Unknown Date", // Extract YYYY-MM-DD
+                    date: event.date
+                        ? event.date.split("T")[0]
+                        : "Unknown Date", // Extract YYYY-MM-DD
                     category: event.category || "Uncategorized",
-                    description: event.description || "No Description Available",
+                    description:
+                        event.description || "No Description Available",
                     start_time: event.start_time || "Unknown Start Time",
                     end_time: event.end_time || "Unknown End Time",
-                    venue: event.venue || "Unknown Venue"
+                    venue: event.venue || "Unknown Venue",
                 }));
 
                 setEvents(formattedEvents);
@@ -284,24 +290,28 @@ const TimelineComponent = () => {
     const formatTime = (timeString) => {
         if (!timeString) return "Invalid Time"; // Handle missing values
         const date = new Date(timeString);
-        
+
         if (isNaN(date.getTime())) {
             console.error("Invalid Date:", timeString);
             return "Invalid Time";
         }
-    
+
         return date.toLocaleTimeString("en-US", {
             hour: "2-digit",
             minute: "2-digit",
-            hour12: true
+            hour12: true,
         });
     };
 
     // Filter events by selected date
-    const filteredEvents = events.filter(event => event.date === selectedDate);
+    const filteredEvents = events.filter(
+        (event) => event.date === selectedDate
+    );
 
     // Sort events by start time (ascending order)
-    filteredEvents.sort((a, b) => new Date(a.start_time) - new Date(b.start_time));
+    filteredEvents.sort(
+        (a, b) => new Date(a.start_time) - new Date(b.start_time)
+    );
 
     // Group events by start time
     const groupedEvents = filteredEvents.reduce((acc, event) => {
@@ -313,56 +323,73 @@ const TimelineComponent = () => {
     }, {});
 
     // Sort group keys in ascending order
-    const sortedStartTimes = Object.keys(groupedEvents).sort((a, b) => new Date(a) - new Date(b));
+    const sortedStartTimes = Object.keys(groupedEvents).sort(
+        (a, b) => new Date(a) - new Date(b)
+    );
 
     return (
-        <div style={{ width: "100%", padding: "5rem 2rem" }}>
+        <div className="timeline-conatiner">
             {/* Loading & Error Handling */}
-            {loading && <p style={{ textAlign: "center", fontSize: "18px" }}>Loading events...</p>}
-            {error && <p style={{ textAlign: "center", fontSize: "18px", color: "red" }}>{error}</p>}
+            {loading && <p className="loading">Loading events...</p>}
+            {error && <p className="error">{error}</p>}
 
             {/* Tabs for Date Selection */}
-            <div style={{ display: "flex", justifyContent: "center", gap: "10px", marginBottom: "20px" }}>
+            <div className="date-selector">
                 {["2025-03-26", "2025-03-27", "2025-03-28"].map((date) => (
                     <button
+                        className={
+                            selectedDate === date
+                                ? "date-button selected"
+                                : "date-button"
+                        }
                         key={date}
                         onClick={() => setSelectedDate(date)}
-                        style={{
-                            padding: "10px 15px",
-                            cursor: "pointer",
-                            border: "none",
-                            backgroundColor: selectedDate === date ? "#007bff" : "#ccc",
-                            color: "#fff",
-                            fontSize: "16px",
-                            borderRadius: "5px"
-                        }}
                     >
-                        {new Date(date).toLocaleDateString("en-GB", { day: "numeric", month: "long" })}
+                        {new Date(date).toLocaleDateString("en-GB", {
+                            day: "numeric",
+                            month: "long",
+                        })}
                     </button>
                 ))}
             </div>
 
             {/* Timeline */}
             {!loading && !error && sortedStartTimes.length > 0 ? (
-                <VerticalTimeline>
+                <VerticalTimeline key={selectedDate}>
                     {sortedStartTimes.map((start_time, index) => (
                         <VerticalTimelineElement
                             key={index}
-                            date={`${formatTime(start_time)} - ${formatTime(groupedEvents[start_time][0].end_time)}`}
-                            iconStyle={{ background: "#444", color: "#fff" }}
-                            contentStyle={{ background: "#f9f9f9", color: "#000" }}
+                            // date={`${formatTime(start_time)} - ${formatTime(
+                            //     groupedEvents[start_time][0].end_time
+                            // )}`}
+                            className="timeline-element"
+                            iconClassName="timeline-icon"
                         >
-                            <h3>🕒 {formatTime(start_time)}</h3>
+                            <h4 className="time">
+                                🕒 {formatTime(start_time)}
+                            </h4>
 
                             {/* Nested Timeline for events at the same start time */}
-                            <div style={{ paddingLeft: "20px", borderLeft: "3px solid #ccc" }}>
+                            <div className="nested-timeline">
                                 {groupedEvents[start_time].map((event, idx) => (
-                                    <div key={idx} style={{ marginBottom: "10px" }}>
-                                        <h4 style={{ color: event.category === "Workshop" ? "#007bff" : event.category === "Technical" ? "#f39c12" : "#28a745" }}>
-                                            {event.title} ({event.category})
+                                    <div className="event-info" key={idx}>
+                                        <h4
+                                            className={
+                                                event.category === "Workshop"
+                                                    ? "workshop"
+                                                    : event.category ===
+                                                      "Technical"
+                                                    ? "technical"
+                                                    : event.category ===
+                                                      "Non-Technical"
+                                                    ? "non-technical"
+                                                    : "general"
+                                            }
+                                        >
+                                            {event.title}
                                         </h4>
                                         <h5>{event.venue}</h5>
-                                        <p>{event.description}</p>
+                                        {/* <p>{event.description}</p> */}
                                     </div>
                                 ))}
                             </div>
@@ -371,11 +398,7 @@ const TimelineComponent = () => {
                 </VerticalTimeline>
             ) : (
                 !loading &&
-                !error && (
-                    <p style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold", color: "red" }}>
-                        🚫 No Events for this day.
-                    </p>
-                )
+                !error && <p className="error">🚫 No Events for this day.</p>
             )}
         </div>
     );

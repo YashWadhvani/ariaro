@@ -1,0 +1,78 @@
+.timeline-conatiner {
+    width: 100%;
+    padding: 5rem 2rem;
+}
+.loading {
+    text-align: center;
+}
+.error {
+    text-align: center;
+    color: red;
+}
+.date-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding-top: 7.5rem;
+}
+.date-button {
+    padding: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: #36bdb4;
+    border-radius: 1rem;
+    font-weight: 700;
+}
+.date-button.selected {
+    background-color: #36bdb4;
+    color: white;
+}
+.vertical-timeline-element-content {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.vertical-timeline-element-content-arrow {
+    border-right: 7px solid rgba(255, 255, 255, 0.25);
+}
+.timeline-icon {
+    background-color: #36bdb4 !important;
+    color: white !important;
+}
+.timeline-element {
+    color: white;
+    font-size: 2.5rem;
+}
+.time {
+    margin-left: -2rem;
+    padding-bottom: 1rem;
+}
+.nested-timeline {
+    padding-left: 2rem;
+    border-left: 3px solid #36bdb4;
+}
+.event-info {
+    margin-bottom: 1rem;
+}
+.workshop {
+    /* color: #007bff; */
+    color: #ff6b81;
+}
+.technical {
+    color: #ff9800;
+}
+.non-technical {
+    color: #1e88e5;
+}
+.general {
+    /* color: #795548; */
+    color: #4caf50;
+}
+@media (max-width:768px) {
+    .timeline-conatiner {
+        width: 100%;
+        padding: 30rem 15rem;
+    }
+}
