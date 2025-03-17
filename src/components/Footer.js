@@ -48,6 +48,9 @@ function Footer() {
                         <li>
                             <Link to="/team">Team</Link>
                         </li>
+                        <li>
+                            <Link to="/schedule">Team</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
