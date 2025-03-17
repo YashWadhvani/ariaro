@@ -33,7 +33,7 @@ function Events() {
     const fetchCategoryEvents = async (categoryKey, categoryName) => {
         try {
             const response = await fetch(
-                `http://localhost:5000/events/category/${categoryName}`
+                `https://ariaro-backend.onrender.com/events/category/${categoryName}`
             ); // Correct URL
             const data = await response.json();
 
@@ -48,7 +48,6 @@ function Events() {
     };
 
     useEffect(() => {
-        // Fetch all categories in parallel
         Promise.allSettled(
             Object.entries(categories).map(([key, name]) =>
                 fetchCategoryEvents(key, name)
@@ -89,7 +88,6 @@ function Events() {
         <section className="events-page">
             <h1>Events</h1>
 
-            {/* Render categories dynamically */}
             {Object.entries(events).map(
                 ([category, eventList]) =>
                     eventList.length > 0 && (

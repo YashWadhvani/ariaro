@@ -251,7 +251,7 @@ const TimelineComponent = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:5000/events") // ✅ Replace with actual API URL
+        fetch("https://ariaro-backend.onrender.com/events") 
             .then((response) => response.json())
             .then((data) => {
                 console.log("API Response:", data);
@@ -262,12 +262,11 @@ const TimelineComponent = () => {
                     return;
                 }
 
-                // Extract and format events
                 const formattedEvents = data.map((event) => ({
                     title: event.title,
                     date: event.date
                         ? event.date.split("T")[0]
-                        : "Unknown Date", // Extract YYYY-MM-DD
+                        : "Unknown Date",
                     category: event.category || "Uncategorized",
                     description:
                         event.description || "No Description Available",
@@ -286,9 +285,8 @@ const TimelineComponent = () => {
             });
     }, []);
 
-    // Function to format time (without timezone conversion)
     const formatTime = (timeString) => {
-        if (!timeString) return "Invalid Time"; // Handle missing values
+        if (!timeString) return "Invalid Time"; 
         const date = new Date(timeString);
 
         if (isNaN(date.getTime())) {
@@ -303,17 +301,14 @@ const TimelineComponent = () => {
         });
     };
 
-    // Filter events by selected date
     const filteredEvents = events.filter(
         (event) => event.date === selectedDate
     );
 
-    // Sort events by start time (ascending order)
     filteredEvents.sort(
         (a, b) => new Date(a.start_time) - new Date(b.start_time)
     );
 
-    // Group events by start time
     const groupedEvents = filteredEvents.reduce((acc, event) => {
         if (!acc[event.start_time]) {
             acc[event.start_time] = [];
@@ -322,18 +317,15 @@ const TimelineComponent = () => {
         return acc;
     }, {});
 
-    // Sort group keys in ascending order
     const sortedStartTimes = Object.keys(groupedEvents).sort(
         (a, b) => new Date(a) - new Date(b)
     );
 
     return (
         <div className="timeline-conatiner">
-            {/* Loading & Error Handling */}
             {loading && <p className="loading">Loading events...</p>}
             {error && <p className="error">{error}</p>}
 
-            {/* Tabs for Date Selection */}
             <div className="date-selector">
                 {["2025-03-26", "2025-03-27", "2025-03-28"].map((date) => (
                     <button
@@ -353,15 +345,11 @@ const TimelineComponent = () => {
                 ))}
             </div>
 
-            {/* Timeline */}
             {!loading && !error && sortedStartTimes.length > 0 ? (
                 <VerticalTimeline key={selectedDate}>
                     {sortedStartTimes.map((start_time, index) => (
                         <VerticalTimelineElement
                             key={index}
-                            // date={`${formatTime(start_time)} - ${formatTime(
-                            //     groupedEvents[start_time][0].end_time
-                            // )}`}
                             className="timeline-element"
                             iconClassName="timeline-icon"
                         >
@@ -369,7 +357,6 @@ const TimelineComponent = () => {
                                 🕒 {formatTime(start_time)}
                             </h4>
 
-                            {/* Nested Timeline for events at the same start time */}
                             <div className="nested-timeline">
                                 {groupedEvents[start_time].map((event, idx) => (
                                     <div className="event-info" key={idx}>
@@ -389,7 +376,6 @@ const TimelineComponent = () => {
                                             {event.title}
                                         </h4>
                                         <h5>{event.venue}</h5>
-                                        {/* <p>{event.description}</p> */}
                                     </div>
                                 ))}
                             </div>

@@ -24,7 +24,7 @@ const partners = [
     MyEquation,
     GDG,
     EduNet,
-]; // Add more as needed
+]; 
 
 function Marquee() {
     return (

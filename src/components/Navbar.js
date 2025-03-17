@@ -25,7 +25,6 @@ function Navbar() {
                     <img className="nav-logo" src={Logo} alt="Logo" />
                 </Link>
 
-                {/* Desktop Menu Links */}
                 <div className="menu-links">
                     <Link to="/" className="px-4">Home</Link>
                     <Link to="/speakers" className="px-4">Speakers</Link>
@@ -34,7 +33,6 @@ function Navbar() {
                     <Link to="/schedule" className="px-4">Schedule</Link>
                 </div>
 
-                {/* Hamburger Menu (Only on Mobile) */}
                 <div className={`menu-icon ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
                     <span></span>
                     <span></span>
@@ -42,7 +40,6 @@ function Navbar() {
                 </div>
             </nav>
 
-            {/* Mobile Menu Overlay */}
             <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
                 <Link to="/" onClick={toggleMenu}>Home</Link>
                 <Link to="/speakers" onClick={toggleMenu}>Speakers</Link>

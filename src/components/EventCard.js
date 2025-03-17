@@ -3,7 +3,6 @@ import "../styles/EventCard.css";
 import LumaButton from "./LumaButton";
 
 function EventCard({ title, date, event_id }) {
-    // Function to format date into "26th March, 2025"
     const formatDate = (isoString) => {
         if (!isoString) return "Invalid Date";
         
@@ -14,7 +13,6 @@ function EventCard({ title, date, event_id }) {
         const month = dateObj.toLocaleString("en-US", { month: "long" });
         const year = dateObj.getFullYear();
 
-        // Get ordinal suffix (st, nd, rd, th)
         const getOrdinal = (d) => {
             if (d > 3 && d < 21) return "th";
             const suffixes = ["st", "nd", "rd"];

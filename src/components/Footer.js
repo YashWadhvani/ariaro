@@ -57,7 +57,7 @@ function Footer() {
                 <p>
                     Made with ❤️ by{" "}
                     <strong>
-                        <a href="https://yashwadhvani.vercel.app" target="_blank">
+                        <a href="https://yashwadhvani.vercel.app" target="_blank" rel="noreferrer">
                             Yash Wadhvani
                         </a>
                     </strong>

@@ -27,7 +27,7 @@ const Carousel = ({ images = [], autoplay = true, speed = 3000 }) => {
         );
 
         Promise.all(imagePromises).catch((err) => console.error("Error loading images:", err));
-    }, [images]); // Re-run when images change
+    }, [images]); 
 
     const settings = {
         dots: true,
@@ -43,7 +43,7 @@ const Carousel = ({ images = [], autoplay = true, speed = 3000 }) => {
     return (
         <div className="custom-carousel">
             {loading ? (
-                <p className="carousel-loader">Loading images...</p> // Placeholder while loading
+                <p className="carousel-loader">Loading images...</p> 
             ) : (
                 <Slider {...settings}>
                     {loadedImages.map((img, index) => (

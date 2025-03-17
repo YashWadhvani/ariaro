@@ -17,21 +17,19 @@ const PastEventsGallery = () => {
         .catch((error) => console.log("Error in fetching Events: ", error))
     }, [])
 
-    // Function to open Lightbox at the current scroll position
     const openLightbox = (images) => {
-        setScrollY(window.scrollY); // Save current scroll position
+        setScrollY(window.scrollY); 
         setSelectedImages(images.map((img) => ({ src: img })));
         setLightboxOpen(true);
-        document.body.style.position = "fixed"; // Prevent body scrolling
-        document.body.style.top = `-${window.scrollY}px`; // Maintain scroll position
+        document.body.style.position = "fixed"; 
+        document.body.style.top = `-${window.scrollY}px`; 
     };
 
-    // Function to close Lightbox and restore scroll position
     const closeLightbox = () => {
         setLightboxOpen(false);
         document.body.style.position = "";
         document.body.style.top = "";
-        window.scrollTo(0, scrollY); // Restore previous scroll position
+        window.scrollTo(0, scrollY); 
     };
 
     return (
@@ -53,7 +51,6 @@ const PastEventsGallery = () => {
                 ))}
             </div>
 
-            {/* React Lightbox */}
             {lightboxOpen && (
                 <Lightbox
                     open={lightboxOpen}

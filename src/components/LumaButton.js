@@ -6,7 +6,7 @@ function LumaButton({ eventId }) {
     const existingScript = document.getElementById(scriptId);
 
     if (existingScript) {
-      existingScript.remove(); // Remove the old script before adding a new one
+      existingScript.remove(); 
     }
 
     const script = document.createElement("script");
@@ -14,7 +14,7 @@ function LumaButton({ eventId }) {
     script.src = "https://embed.lu.ma/checkout-button.js";
     script.async = true;
     document.body.appendChild(script);
-  }, [eventId]); // Reload script when eventId changes
+  }, [eventId]); 
 
   return (
     <a
@@ -22,7 +22,7 @@ function LumaButton({ eventId }) {
       className="luma-checkout--button"
       data-luma-action="checkout"
       data-luma-event-id={eventId}
-      onClick={(e) => e.preventDefault()} // Prevents redirection
+      onClick={(e) => e.preventDefault()} 
     >
       Register for Event
     </a>

@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/HeroSection.css"; // Ensure styling is applied
-import AriaRoBanner from "../assets/ariaro-banner.png"
 import Carousel from "./Carousel"
 
 function HeroSection() {

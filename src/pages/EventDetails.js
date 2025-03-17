@@ -1,16 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import LumaButton from "../components/LumaButton";
-import "../styles/EventDetails.css"; // Import the CSS file
+import "../styles/EventDetails.css"; 
 
 function EventDetails() {
-    const { eventId } = useParams(); // Get eventId from URL
+    const { eventId } = useParams(); 
     const [event, setEvent] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch(`https://ariaro-backend.onrender.com/events/${eventId}`) // Check if backend is running on 5000
+        fetch(`https://ariaro-backend.onrender.com/events/${eventId}`) 
             .then((res) => {
                 if (!res.ok) throw new Error("Event not found");
                 return res.json();
