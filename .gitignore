@@ -23,3 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 *.zip
+
+#Old Assets
+public/assets/Team_Old/*
+public/assets/Speakers_Old/*

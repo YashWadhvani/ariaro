@@ -49,7 +49,7 @@ function Footer() {
                             <Link to="/team">Team</Link>
                         </li>
                         <li>
-                            <Link to="/schedule">Team</Link>
+                            <Link to="/schedule">Schedule</Link>
                         </li>
                     </ul>
                 </div>
