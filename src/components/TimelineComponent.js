@@ -85,6 +85,7 @@ const TimelineComponent = () => {
 
     return (
         <div className="timeline-conatiner">
+            <h1 className="schedule-heading">Schedule</h1>
             {loading && <p className="loading">Loading events...</p>}
             {error && <p className="error">{error}</p>}
 
