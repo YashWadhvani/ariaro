@@ -5,11 +5,29 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/Carousel.css";
 
 const Carousel = ({ images = [], autoplay = true, speed = 3000 }) => {
-    const [key, setKey] = useState(0);
+    const [loadedImages, setLoadedImages] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setKey(prevKey => prevKey + 1);
-    }, [images]); // Rerender when images change
+        let loadedCount = 0;
+        const imagePromises = images.map((src) => 
+            new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = src;
+                img.onload = () => {
+                    loadedCount++;
+                    if (loadedCount === images.length) {
+                        setLoadedImages(images);
+                        setLoading(false);
+                    }
+                    resolve();
+                };
+                img.onerror = reject;
+            })
+        );
+
+        Promise.all(imagePromises).catch((err) => console.error("Error loading images:", err));
+    }, [images]); // Re-run when images change
 
     const settings = {
         dots: true,
@@ -23,14 +41,18 @@ const Carousel = ({ images = [], autoplay = true, speed = 3000 }) => {
     };
 
     return (
-        <div className="custom-carousel" key={key}>
-            <Slider {...settings}>
-                {images.map((img, index) => (
-                    <div key={index} className="carousel-slide">
-                        <img src={img} alt={`Slide ${index + 1}`} />
-                    </div>
-                ))}
-            </Slider>
+        <div className="custom-carousel">
+            {loading ? (
+                <p className="carousel-loader">Loading images...</p> // Placeholder while loading
+            ) : (
+                <Slider {...settings}>
+                    {loadedImages.map((img, index) => (
+                        <div key={index} className="carousel-slide">
+                            <img src={img} alt={`Slide ${index + 1}`} />
+                        </div>
+                    ))}
+                </Slider>
+            )}
         </div>
     );
 };

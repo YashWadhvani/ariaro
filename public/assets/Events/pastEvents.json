@@ -1,0 +1,39 @@
+[
+    {
+        "title": "AriaRo 1.0",
+        "description": "A National Level Tech Symposium",
+        "cover": "/assets/Events/AriaRo_1/cover.jpg",
+        "images": [
+            "/assets/Events/AriaRo_1/cover.jpg",
+            "/assets/Events/AriaRo_1/1.jpg",
+            "/assets/Events/AriaRo_1/2.jpg",
+            "/assets/Events/AriaRo_1/3.jpg",
+            "/assets/Events/AriaRo_1/4.jpg",
+            "/assets/Events/AriaRo_1/5.jpg",
+            "/assets/Events/AriaRo_1/6.jpg",
+            "/assets/Events/AriaRo_1/7.jpg"
+        ]
+    },
+    {
+        "title": "Inferno 2.0",
+        "description": "A thrilling and fun filled Gaming Event.",
+        "cover": "/assets/Events/Inferno_2/cover.jpg",
+        "images": [
+            "/assets/Events/Inferno_2/cover.jpg",
+            "/assets/Events/Inferno_2/1.jpg",
+            "/assets/Events/Inferno_2/2.jpg",
+            "/assets/Events/Inferno_2/3.jpg",
+            "/assets/Events/Inferno_2/4.jpg",
+            "/assets/Events/Inferno_2/5.jpg",
+            "/assets/Events/Inferno_2/6.jpg",
+            "/assets/Events/Inferno_2/7.jpg",
+            "/assets/Events/Inferno_2/8.jpg",
+            "/assets/Events/Inferno_2/9.jpg",
+            "/assets/Events/Inferno_2/10.jpg",
+            "/assets/Events/Inferno_2/11.jpg",
+            "/assets/Events/Inferno_2/12.jpg",
+            "/assets/Events/Inferno_2/13.jpg",
+            "/assets/Events/Inferno_2/14.jpg"
+        ]
+    }
+]

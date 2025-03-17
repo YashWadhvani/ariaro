@@ -103,6 +103,9 @@ function Speakers() {
             "Nilesh Vaghela",
             "Dr. Nidhi Arora",
             "Viral Parmar",
+            "Dr. Ravi Mundra",
+            "Col. Vinod Shah",
+            "Manmeet Thakur",
             "Pratik Rathod",
             "Harsh Walia",
             "Tilak Masrani",
@@ -115,6 +118,8 @@ function Speakers() {
             "Nilesh Vaghela",
             "Harsh Walia",
             "Sundar Mahalingam",
+            "Kaustuv Mohanty",
+            "Vasu Shah"
         ]
     };
 
