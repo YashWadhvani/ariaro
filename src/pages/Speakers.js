@@ -111,6 +111,7 @@ function Speakers() {
             "Tilak Masrani",
             "Manthan Tripathi",
             "Dr. Puneet Sharma",
+            
             "Dr. Animesh Agrawal",
             "Dr. Gaurav Londhe",
         ],
@@ -150,7 +151,7 @@ function Speakers() {
             ) : (
                 sections.map((section) => (
                     groupedSpeakers[section].length > 0 && (
-                        <div key={section}>
+                        <div key={section} className="speaker-container">
                             <h2 className="team-section-title">{section}</h2>
                             <div className="profile-cards-grid">
                                 {groupedSpeakers[section].map((speaker, index) => (

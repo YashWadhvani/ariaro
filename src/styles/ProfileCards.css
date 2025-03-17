@@ -11,6 +11,10 @@
     margin-top: 20px;
   }
   
+  .speaker-container {
+    padding: 5rem 2rem;
+  }
+
   .profile-card {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
     padding: 20px;
@@ -58,5 +62,8 @@
     }
     .profile-card p {
       padding: 2rem 0;
+    }
+    .speaker-container {
+      padding: 10rem 5rems;
     }
   }

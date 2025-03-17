@@ -141,7 +141,7 @@ function Team() {
                 sections.map(
                     (section) =>
                         groupedMembers[section].length > 0 && (
-                            <div key={section}>
+                            <div key={section} className="speaker-container">
                                 <h2 className="team-section-title">
                                     {section}
                                 </h2>
