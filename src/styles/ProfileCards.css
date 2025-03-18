@@ -66,4 +66,7 @@
     .speaker-container {
       padding: 10rem 5rems;
     }
+    .profile-cards-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
   }

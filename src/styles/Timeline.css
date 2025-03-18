@@ -80,7 +80,7 @@
         min-height: 72.25vh;
     }
     .vertical-timeline-element-icon {
-        top: 14px !important;
+        top: 38px !important;
         width: 20px !important;
         height: 20px !important;
     }
@@ -89,5 +89,14 @@
     }
     .date-selector {
         padding-top: 7.5rem;
+    }
+    .event-info {
+        padding: 3rem 0;
+    }
+    .time {
+        padding-bottom: 5rem;
+    }
+    .vertical-timeline-element {
+        padding: 10rem 2rem;
     }
 }
