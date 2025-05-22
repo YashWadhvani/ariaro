@@ -24,11 +24,7 @@
     "yet-another-react-lightbox": "^3.21.8",
     "yocto-queue": "^1.2.1"
   },
-  "devDependencies": {
-    "npm-force-resolutions": "^0.0.10"
-  },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,9 +47,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "resolutions": {
-    "nth-check": "^2.0.1",
-    "postcss": "^8.4.31"
   }
 }
