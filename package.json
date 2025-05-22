@@ -2,7 +2,7 @@
   "name": "ariaro",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ariaro.karnavatiuniversity.edu.in",
+  "homepage": "https://ariaro.vercel.app",
   "dependencies": {
     "@babel/helpers": "^7.26.10",
     "@babel/runtime": "^7.27.1",
