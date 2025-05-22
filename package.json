@@ -22,7 +22,7 @@
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4",
     "yet-another-react-lightbox": "^3.21.8",
-    "yocto-queue": "^1.2.0"
+    "yocto-queue": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
