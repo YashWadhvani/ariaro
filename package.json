@@ -5,7 +5,7 @@
   "homepage": "https://ariaro.karnavatiuniversity.edu.in",
   "dependencies": {
     "@babel/helpers": "^7.26.10",
-    "@babel/runtime": "^7.26.10",
+    "@babel/runtime": "^7.27.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
