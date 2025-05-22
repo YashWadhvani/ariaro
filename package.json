@@ -20,7 +20,7 @@
     "react-slick": "^0.30.3",
     "react-vertical-timeline-component": "^3.5.3",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4",
+    "web-vitals": "^5.0.1",
     "yet-another-react-lightbox": "^3.21.8",
     "yocto-queue": "^1.2.0"
   },
