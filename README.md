@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# AriaRo 3.0 - National Level Technical Symposium @ Unitedworld Institute of Technology, Karnavati University
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the frontend code for the official website of the national level technical symposium hosted by **Unitedworld Institute of Technology, Karnavati University**. The website provides comprehensive information about the symposium, including event schedules, registration, announcements, and contact details.
+
+## Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## About
+
+The symposium is a flagship technical event bringing together students, professionals, and enthusiasts from across the country. This website serves as the central hub for all symposium-related activities, updates, and registrations.
+
+## Features
+
+- ⚡ Modern, responsive React-based UI
+- 📅 Event listings and detailed descriptions
+- 📝 Online registration forms
+- 🕒 Schedule and real-time announcements
+- 📍 Contact and location information
+- 🔒 Secue and user-friendly experience
+
+## Demo
+
+> [Live Demo Link](https://ariaro.vercel.app/) <!-- Replace with actual deployed link if available -->
+
+## Getting Started
+
+To run the project locally:
+
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/YashWadhvani/ariaro.git
+    cd ariaro
+    ```
+
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3. **Start the development server:**
+    ```bash
+    npm start
+    ```
+    The app will be available at [http://localhost:3000](http://localhost:3000).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+- `npm start` – Runs the app in development mode.
+- `npm run build` – Builds the app for production.
+- `npm test` – Launches the test runner.
+- `npm run eject` – Ejects the app for advanced configuration (irreversible).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+For more details, see the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+.
+├── public/                # Static assets (index.html, favicon, etc.)
+├── src/                   # Source code
+│   ├── assets/            # Images, fonts, and other media
+│   ├── components/        # Reusable React components
+│   ├── pages/             # Page-level React components
+│   ├── App.js             # Main application component
+│   ├── index.js           # Entry point
+│   └── ...                # Additional files and folders
+├── package.json           # Project metadata and dependencies
+├── README.md              # Project documentation
+└── ...                    # Other configuration files
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing
 
-### `npm run build`
+Contributions are welcome! If you have suggestions, bug reports, or want to add features, please open an issue or submit a pull request. For major changes, please discuss them via an issue first.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project is licensed under the [MIT License](LICENSE).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contact
 
-### `npm run eject`
+For questions or feedback, please contact:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Yash Wadhvani**  
+    Email: yashwadhvani123@gmail.com  
+    GitHub: [YashWadhvani](https://github.com/YashWadhvani)
